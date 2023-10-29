@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ArticleController;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource("messages", MessageController::class);
+
+Route::resource("articles", ArticleController::class);

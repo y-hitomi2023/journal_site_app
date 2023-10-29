@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <a href="{{ route('articles.index') }}">戻る</a>
     <h1>新規論文投稿</h1>
 
     @if ($errors->any())
@@ -37,7 +36,7 @@
             <textarea name="body" class="body" id="body">{{ old('body') }}</textarea>
         </p>
 
-        <input type="submit" value="登録">
+        <input type="submit" value="投稿">
     </form>
 </body>
 
